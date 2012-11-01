@@ -1,27 +1,28 @@
-set nu
+"common configuration {{
+set helplang=cn
+set nu "Show line-number
+set hlsearch "Highlight search
+set incsearch "Increment search
+set ignorecase
 
-set shortmess=atI
+"set shortmess=atI
 
-syntax on
+set cursorline
+
+syn on
 set showcmd
-set encoding=utf-8
-set fileencoding=utf-8
-set termencoding=utf-8
 
 set nobackup
 set noswapfile
 
 set confirm
 
-set autoindent
-set cindent
-
-set tabstop=2
+set expandtab
+set tabstop=4
 set shiftwidth=4
 
-set smarttab
+set foldmethod=syntax
+"}}
 
-
-set ignorecase
-set hlsearch
-set incsearch
+command ReloadASPTemplate !/home/yangfan/envs/ecom/asp/bin/reload -p 8301
+nmap <F5> :ReloadASPTemplate
